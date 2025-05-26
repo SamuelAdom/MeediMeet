@@ -1,6 +1,6 @@
-# Meedimet 🩺
+# Medimeet 🩺
 
-**Meedimet** is a frontend doctor appointment booking web application that allows users to register, log in, and book appointments with doctors. The app is built with modern tools like **React**, **Tailwind CSS**, and **Clerk** for secure and seamless authentication.
+**Medimeet** is a frontend doctor appointment booking web application that allows users to register, log in, and book appointments with doctors. The app is built with modern tools like **React**, **Tailwind CSS**, and **Clerk** for secure and seamless authentication.
 
 ## 🚀 Features
 
