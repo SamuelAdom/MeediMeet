@@ -6,10 +6,10 @@ import {useNavigate} from 'react-router-dom'
 const DoctorCard = ({ item }) => {
   const navigate= useNavigate()
   return (
-    <div className="w-full p-4 bg-white rounded-lg shadow-md transform lg:hover:scale-105 transition-transform duration-300 ease-in-out">
+    <div className="w-full p-4 bg-white rounded-lg shadow-md transform lg:hover:scale-105 transition-transform duration-300 ease-in-out gap-1.5">
       <div onClick={()=>{navigate(`/appointment/${item._id}`),scrollTo(0,0)}}>
           <img
-          className="w-full h-fit md:w-full md:h-full object-cover rounded-t-lg bg-blue-100 cursor-pointer"
+          className="w-full h-fit sm:w-full sm:h-full object-cover rounded-t-lg bg-blue-100 cursor-pointer"
           alt="Card Image"
           src={item.image}
         />

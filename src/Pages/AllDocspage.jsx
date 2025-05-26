@@ -32,11 +32,11 @@ applyFilter()
 
   return (
     <div className="m-3 sm:m-10 flex flex-col sm:flex-row">
-      
-      <div className="flex flex-col gap-2 items-start">
+
+      <div className="flex flex-col items-start">
         <h1 className="text-lg sm:text-2xl">Browse through the doctors specialist.</h1>
         <button onClick={()=>setShowFilter(prev=>!prev)} className={`py-1.5 px-4 rounded-sm border transition-all sm:hidden ${showFilter?"bg-blue-400 text-white text-sm":""}`}>Filter</button>
-        <div className={`flex-col gap-2.5 w-full sm:w-40 ${showFilter?"flex":"hidden sm:flex" }`}>
+        <div className={`flex-col gap-2.5 w-full sm:w-40 mt-1 ${showFilter?"flex":"hidden sm:flex" }`}>
             <p onClick={()=>speciality==="General physician"? navigate("/all-doctors"): navigate("/all-doctors/General physician")} className={`text-sm md:text-md cursor-pointer border-1 border-green-300 text-gray-800 py-1.5 px-4 rounded-md ${speciality==="General physician"? "bg-gray-400 text-black":""}`}>General physician</p>
         <p onClick={()=>speciality==="Gynecologist"? navigate("/all-doctors"): navigate("/all-doctors/Gynecologist")} className={`text-sm md:text-md cursor-pointer border-1 border-green-300 text-gray-800 py-1.5 px-4 rounded-md  ${speciality==="Gynecologist"? "bg-gray-400 text-black":""}`}>Gynecologist</p>
         <p onClick={()=>speciality==="Dermatologist"? navigate("/all-doctors"): navigate("/all-doctors/Dermatologist")} className={`text-sm md:text-md cursor-pointer border-1 border-green-300 text-gray-800 py-1.5 px-4 rounded-md  ${speciality==="Dermatologist"? "bg-gray-400 text-black":""}`}>Dermatologist</p>
@@ -46,7 +46,7 @@ applyFilter()
         </div>
       
       </div>
-      <div className="grid grid-cols-1 sm:ml-10 md:grid-cols-2 lg:grid-cols-3 gap-2.5">
+      <div className="grid grid-cols-1 sm:ml-10 md:grid-cols-2 lg:grid-cols-3 sm:gap-5">
         {filter.map((item)=>(
           <FilterCard key={item.id} item={item}/>
         

@@ -8,11 +8,11 @@ const TopDoctors = () => {
 
   return (
     <>
-    <div className='flex flex-col justify-center items-center mt-15 space-y-2.5'>
+    <div className='flex flex-col justify-center items-center mt-15 space-x-2.5'>
         <h1 className='text-lg md:text-2xl'>Top Doctors</h1>
         <p className='text-lg text-center md:text-md'>Meet our most trusted and highly rated medical professionals</p>
     </div>
-    <div className='flex flex-col justify-center items-center md:grid md:grid-cols-3 lg:grid lg:grid-cols-5 gap-2'>
+    <div className='flex flex-col justify-center items-center mt-5 md:grid md:grid-cols-3 lg:grid lg:grid-cols-5 gap-4'>
         {doctors.slice(0, 10).map((item)=>{
             return(
            
@@ -21,7 +21,7 @@ const TopDoctors = () => {
             )
         })}
     </div>
-      <div className='flex justify-center mt-3'>
+      <div className='flex justify-center mt-5'>
 <Link to="/all-doctors"><button className='bg-blue-400 text-white text-2xl md:text-2xl py-3 px-10 rounded-lg hover:bg-blue-700 transition-all ease-in-out duration-500 cursor-pointer'> View All</button></Link>
     </div>
     </>
