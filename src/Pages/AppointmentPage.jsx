@@ -17,14 +17,16 @@ const AppointmentPage = () => {
   const { openSignIn } = useClerk();
 
 
-  const getDoctorsInfo = () => {
-    if (docId) {
-      setDoctorInfo(doctors.find((doc) => doc._id === docId));
-    }
-  };
-
+  
   useEffect(() => {
+    const getDoctorsInfo = () => {
+    
+      setDoctorInfo(doctors.find((doc) => doc._id === docId));
+    
+  };
+if (docId) {
     getDoctorsInfo();
+}
   }, [doctors, docId]);
 
 
@@ -41,13 +43,13 @@ const AppointmentPage = () => {
             />
           </div>
           <div className="flex flex-col space-y-2.5 border-1 border-gray-300 shadow-lg p-3 rounded-2xl md:w-200 lg:w-full">
-            <h1 className="font-bold text-3xl">
+            <h1 className="font-bold text-2xl sm:text-3xl">
               {doctorsInfo.name}
               <FaCheck className="inline ml-3 bg-blue-600 rounded-full text-2xl w-6 h-fit p-1 text-white" />
             </h1>
-            <div className="flex flex-row gap-3 text-lg">
+            <div className="flex flex-row items-center gap-3 text-md">
               <p>{doctorsInfo.degree}</p>-<p>{doctorsInfo.speciality}</p>
-              <p className="bg-blue-600 text-white px-1.5 rounded-full">
+              <p className="bg-blue-600 text-white text-center text-md py-2  px-3.5 rounded-full">
                 {doctorsInfo.experience}
               </p>
             </div>
